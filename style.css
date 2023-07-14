@@ -3,17 +3,14 @@
     padding: 0;
 }
 
-:root {
+/* :root {
 
-}
+} */
 
 body, input {
     font-family: 'Mulish', sans-serif;
 }
 
-#app > * {
-    /* border: 1px solid rgb(241, 8, 8); */
-}
 
 #app {
     display: grid;
@@ -80,19 +77,32 @@ main .buttom-wrapper {
 }
 
 main .buttom-wrapper button {
-    background-color: #065E7C;
+    background-color: #33464d;
     width: 40px;
     height: 40px;
     border: none;
     border-radius: 100px;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s;
-    box-shadow: 0px 10px 10px rgba(71, 71, 71, 0.705)
+    transition: transform .1s, background-color .1s;
+    box-shadow: 0px 10px 10px rgba(71, 71, 71, 0.705);
 }
 
-main .buttom-wrapper button:hover {
+/* só desktop */
+/* main .buttom-wrapper button:hover {
     transform: scale(1.1);
+    background-color: hsl(195, 100%, 25%);
+} */
+/* só desktop */
+
+.buttom-wrapper button:focus {
+    animation: jello-horizontal;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-out;
+    transform: scale(1.1);
+    background-color: #065E7C;
+    transition: background-color .4s .8s;
+    
 }
 
 main .section-text p {
@@ -165,6 +175,69 @@ footer p {
     line-height: normal;
 }
 
+
+/* Animation Buttom */
+@-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1.1);
+              transform: scale3d(1.25, 0.75, 1.1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1.1);
+              transform: scale3d(0.75, 1.25, 1.1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1.1);
+              transform: scale3d(1.15, 0.85, 1.1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1.1);
+              transform: scale3d(0.95, 1.05, 1.1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1.1);
+              transform: scale3d(1.05, 0.95, 1.1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1.1);
+              transform: scale3d(1, 1, 1.1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1.1);
+              transform: scale3d(1, 1, 1.1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1.1);
+              transform: scale3d(1.25, 0.75, 1.1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1.1);
+              transform: scale3d(0.75, 1.25, 1.1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1.1);
+              transform: scale3d(1.15, 0.85, 1.1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1.1);
+              transform: scale3d(0.95, 1.05, 1.1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1.1);
+              transform: scale3d(1.05, 0.95, 1.1);
+    }
+    100% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+    }
+  }
+/* Animation Buttom */
 
 
 
